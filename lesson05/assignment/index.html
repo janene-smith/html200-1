@@ -6,9 +6,7 @@
   </head>
   <body>
     <h1>Bank Application</h1>
-
     <p>Type which action to perform in the transaction type box.</p>
-
     <h2>Transaction options:</h2>
       <ul>
         <li>Enter Q to quit (immediately quits the program).</li>
@@ -18,24 +16,10 @@
       </ul>
 
       <label for="transType">Transaction type:</label>
-      <input type="text" id="transType" name="transType" value="">
-      <button type="button" name="button" onclick="alert()">Submit</button>
-      <output name="result"></output>
+      <input type="text" id="transType" value="">
+      <button type="button" onclick="transType()">Submit</button>
 
-    <script src="./main.js"></script>
+
+<script src="./main.js"></script>
   </body>
 </html>
-
-<p>
-The user should see a prompt so they can type which action to perform.
-The user will have a list of 4 actions to choose from.
-Enter Q to quit (immediately quits the program).
-Enter W to withdraw.
-The user will be prompted again to enter an amount to withdraw. After withdrawing money, they should be able to type another option.
-Enter D to deposit.
-The user will be prompted again to enter an amount to deposit. After depositing money, they should be able to type another option.
-Enter B to view balance.
-The user will see their balance. Afterwards, they should be able to type another option.
-The balance should update after any Withdrawal or Deposit transactions.
-The program will loop asking for input until the user enters Q.
-</p>
