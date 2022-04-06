@@ -10,46 +10,51 @@ The balance should update after any Withdrawal or Deposit transactions.
 The program will loop asking for input until the user enters Q.
 */
 
-function transType() {
-  const q = prompt('Enter Q to quit (immediately quits the program).');
-  const w = prompt('Enter W to make a withdrawal.');
-  const d = prompt('Enter D to deposit funds.');
-  const b = prompt('Enter B to view balance.');
-  alert(transType);
-  console.log(transType);
-}
-
 //Using SWITCH
-const myTransaction = "W";
-function transType(transaction) {
-  switch (transaction) {
-    case 'Q': {
-      return 'Quit the program immediately.';
-      break;
-    }
-    case 'W': {
-      return 'Enter an amount to withdraw.';
-    }
-    case 'D': {
-      return 'Enter an amount to deposit.';
-    }
-    case 'B': {
-      return 'Your balance is: ';
-    }
-  }
+const myTransaction = "Q";
 
+function transType(transaction) {
+    switch (transaction) {
+        case 'Q': {
+            return 'Quit the program immediately.';
+            break;
+        }
+        case 'W': {
+            return 'Enter an amount to withdraw.';
+        }
+        case 'D': {
+            return 'Enter an amount to deposit.';
+        }
+        case 'B': {
+            return 'Your balance is: ';
+        }
+        default: {
+            return 'transaction type not found';
+        }
+    }
 }
+
 console.log(
   transType(myTransaction)
 );
 
-//try-catch-finally
-try {
-    const dogToParse = '{"dog": "Husky", "name": "Dubs}';
-    const parsedDog = JSON.parse(dogToParse);
-    console.log(parsedDog.name);
-} catch (error) {
-    console.log('invalid dog object');
-} finally {
-    console.log('Program finished');
-}
+// Alerts and Prompts - Lesson 5
+
+// Ask for input using a dialog box
+const myTrans = prompt('What type of transaction would you like to make?');
+
+// Display input in a dialog box
+alert(myTrans);
+
+// Ask for input with no default value
+const w = prompt('How much would you like to withdraw from your account today?');
+const d = prompt('How much would you like to deposit into your account today?');
+const b = ('Your balance is: ');
+
+// Display input in a dialog box
+alert (w);
+alert (d);
+alert (b);
+console.log(w);
+console.log(d);
+console.log(b);
