@@ -7,11 +7,6 @@ if (isDogHungry) {
 }
 
 
-
-
-
-
-
 const hairLengthInInches = 10;
 
 if (hairLengthInInches < 2) {
@@ -21,10 +16,6 @@ if (hairLengthInInches < 2) {
 } else {
     console.log('long hair');
 }
-
-
-
-
 
 
 function makeDogRollOver(dog) {
@@ -40,10 +31,6 @@ function makeDogRollOver(dog) {
 }
 
 makeDogRollOver('Fido');
-
-
-
-
 
 
 const dogAgeInHumanYears = 1;

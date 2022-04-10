@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Bank Application</h1>
+    <h3>Transaction options:</h3>
+      <ul>
+        <li>Enter Q to quit (immediately quits the program).</li>
+        <li>Enter W to withdraw funds.</li>
+        <li>Enter D to deposit funds.</li>
+        <li>Enter B to view balance.</li>
+      </ul>
+
+      <input id="test" type="text" value=""></input>
+      <button type="button" id="test" onclick="alert()">Submit</button>
+
+      <p id="test"></p>
+
+<script>
+
+function myFunction() {
+    let letter = document.getElementById("my_input").value;
+    let text;
+    let wdwNum;
+    if (letter === "q") {
+        text = "Program will quit immediately.";
+    } else if (letter === "w") {
+        text = prompt("Enter amount to withdraw.");
+          if (wdwNum <= 300) {
+              text = "Withdraw is valid.";
+          } else if (wdwNum >= 300) {
+              text = "Withdraw in denominations of $20. Daily cap of $300.";
+          } else {
+              text = "Invalid transaction.";
+          }
+    } else  {
+        text = "Awh... Not even close, man.";
+    }
+    document.getElementById("test").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>
