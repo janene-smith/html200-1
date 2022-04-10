@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Bank Application</h1>
+    <dialog id="bankTrans">
+      <form method="dialog">
+          <p><label>Select transaction option:
+            <select>
+              <option></option>
+              <option>Quit program</option>
+              <option>Make a withdraw</option>
+              <option>Make a deposit</option>
+              <option>See account balance</option>
+            </select>
+          </label></p>
+              <menu>
+                <button value="cancel">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+              </menu>
+        </form>
+    </dialog>
+
+    <menu>
+      <button id="updateDetails">Update details</button>
+    </menu>
+
+    <output aria-live="polite"></output>
+
+<script type="text/javascript">
+let updateButton = document.getElementById('updateDetails');
+let bankTrans = document.getElementById('bankTrans');
+let outputBox = document.querySelector('output');
+let selectTrans = document.querySelector('select');
+let confirmBtn = document.getElementById('confirmBtn');
+
+// "Update details" button opens the <dialog> modally
+updateButton.addEventListener('click', function onOpen() {
+if (typeof bankTrans.showModal === "function") {
+  bankTrans.showModal();
+  } else {
+    alert("The <dialog> API is not supported by this browser");
+  }
+});
+// "Select transaction option" input sets the value of the submit button.
+selectTrans.addEventListener('change', function onSelect(e) {
+  confirmBtn.value = selectTrans.value;
+});
+// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+bankTrans.addEventListener('close', function onClose() {
+  outputBox.value = bankTrans.returnValue + " button clicked - " + (new Date()).toString();
+});
+</script>
+  </body>
+</html>
