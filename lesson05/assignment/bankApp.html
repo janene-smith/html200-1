@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Bank Application - Assignment 5</title>
+
+  </head>
+  <body>
+    <h1>Bank Application</h1>
+    <h2>Transaction options:</h2>
+          <ul>
+            <li>Enter Q to quit (immediately quits the program).</li>
+            <li>Enter W to withdraw funds.</li>
+            <li>Enter D to deposit funds.</li>
+            <li>Enter B to view balance.</li>
+          </ul>
+
+    <input type="text" value="">
+    <button type="button" onclick="calculate()">Submit</button>
+
+        <form>
+          <label for="bankTrans">Select transaction option:</label>
+            <select id="bankTrans">
+              <option></option>
+              <option value="quit" onclick="close()">Quit program</option>
+              <option value="withdraw">Make a withdraw</option>
+              <option value="deposit">Make a deposit</option>
+              <option value="balance">See account balance</option>
+            </select>
+            <input type="submit" value="submit">
+        </form>
+        <p id="demo"></p>
+
+    <script>
+      // Using a function
+      const myTransaction = 'deposit';
+
+      function getTransInfo(transaction) {
+        if (transaction === 'quit') {
+            return 'Program will close.';
+        } else if (transaction === 'withdraw') {
+            return 'Enter amount to withdraw.';
+        } else if  (transaction === 'deposit') {
+            return 'Enter amount to deposit';
+        } else if (transaction === 'balance') {
+            return 'Your balance is $300.00.';
+        } else {
+          return 'Transaction not valid.';
+        }
+      }
+
+      console.log(getTransInfo(myTransaction));
+
+      // Quit banking program
+      const quit = true;
+
+      if (quit) {
+        console.log('Program has been terminated.')
+      } else {
+        console.log('Transaction not valid.');
+      }
+
+      // Bank withdraw transaction
+      const myWithdraw = true;
+
+      if (myWithdraw) {
+        console.log('Enter amount of funds to withdraw today.');
+      } else {
+        console.log('Transaction not valid.');
+      }
+
+      // Bankd deposit Transaction
+      const myDeposit = true;
+
+      if (myDeposit) {
+        console.log('Enter amount of funds to deposit today.');
+      } else {
+        console.log('Transaction not valid.');
+      }
+
+      // Bank balance request
+      const myBalance = true;
+
+      if (myBalance) {
+        console.log('Your balance is: $300.00.');
+      } else {
+        console.log('Transaction not valid.');
+      }
+    </script>
+  </body>
+</html>

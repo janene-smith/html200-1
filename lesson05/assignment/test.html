@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset='utf-8'>
+    <title>Assignment 5</title>
+  </head>
+  <body>
+    <label for="userInput">Transaction type:</label>
+    <input type="text" id="userInput" >
+    <button type="button" onclick="button_1" id="button_1">Submit</button>
+    <h3 id="heading_1"></h3>
+
+    <script charset="utf-8">
+    const button1 = document.querySelector('#button_1');
+    const heading1 = document.querySelector('#heading_1');
+
+    button1.onclick = () => {
+      const myTrans = prompt('What type of transaction would you like to make?');
+      alert(`You would like to make the following transaction: ${myTrans}.`);
+      heading1.textContent = `Transaction type: ${myTrans}`;
+    }
+
+    let balance;
+    let deposit;
+    let withdraw;
+    let result = 0;
+
+
+    function userInput() {
+      let userInput = prompt('Enter a transaction type:');
+      callback(userInput);
+      console.log(userInput)
+
+          const parsed = balance.parseInt(userInput, balance);
+          if (balance.isNan(parsed)) {
+            return 0;
+          }
+          return parsed + deposit;
+
+           switch(mytrans) {
+             case balance = balance.parseInt(userInput)
+                console.log(balance);
+                break;
+            case deposit <= 50000:
+                console.log(deposit);
+                break;
+             case withdraw >= 20:
+                console.log(withdraw);
+                break
+
+            }
+    }
+    console.log(result);
+    console.log(userInput);
+
+
+
+
+
+    </script>
+  </body>
+</html>
