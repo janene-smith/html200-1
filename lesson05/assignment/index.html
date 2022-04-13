@@ -17,9 +17,40 @@
 
       <label for="myTrans">Transaction type:</label>
       <input type="text" id="myTrans" name="myTrans">
-      <button type="submit" onclick="transaction()">Submit</button>
+      <button type="submit" onclick="everything()">Submit</button>
 
 
-<script src="./main.js"></script>
+<script>
+let balance = 0;
+
+function everything() {
+     const myTrans = prompt('What type of transaction would you like to make?');
+
+      switch(myTrans) {
+         case 'B':
+            alert(balance);
+            break;
+         case 'D':
+           let deposit = prompt("How much do you want to deposit?");
+           balance += parseInt(deposit);
+           if (deposit > 50000) {
+             alert('Depoist cannot exceed $50,000.')
+           } else if (deposit <= 50000) {
+             alert(balance);
+           }
+           break;
+         case 'W':
+           let withdraw = prompt("How much do you want to withdraw?");
+           balance -= parseInt(withdraw);
+           alert(balance);
+           break;
+         case 'Q':
+            const quit = () => {
+              return;
+            }
+            break;
+       }
+}
+</script>
   </body>
 </html>
